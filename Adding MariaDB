@@ -1,0 +1,9 @@
+sudo yum install mariadb-server
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
+sudo mysql_secure_installation
+mysql -u root -p
+create user 'root'@'localhost' identified by '12345' (12345 - password it's from project properties from ide)
+grant all privileges on photo_app.* to 'root'@'localhost'; (give priveleges of <DBNAME> to <user>)
+flush privileges;
+mysql -u root -p (-u user -p password. root is a new user that we created)
